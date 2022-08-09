@@ -1,0 +1,30 @@
+
+
+<h1>My name is {{username}}</h1>
+<h1>{{address}}</h1>
+<p>{{address}}</p>
+
+<img [src] ="imgurl">
+
+
+<h1>Event Binding</h1>
+<button type="button" (click)="clickEvent()"> click Event </button>
+<br>
+<br>
+<p>input event</p>
+<input type="text" name="" id="" (input)="inputEvent('')" >
+<br>
+<br>
+<p>blur event</p>
+<input type="text" name="" id="" (blur)="blurEvent()" >
+<br>
+<br>
+<p>focus event</p>
+<input type="text" name="" id="" (focus)="focusEvent()" >
+<br>
+<br>
+<select #onselect  name="" id="" (change)="changeEvent(onselect.value)" >
+    <option value="dog">dog</option>
+    <option value="camel">camel</option>
+    <option value="girraffe">girraffe</option>
+</select>
