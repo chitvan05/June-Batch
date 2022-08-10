@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FirstService } from '../Services/first.service';
 
 @Component({
@@ -8,10 +9,14 @@ import { FirstService } from '../Services/first.service';
 })
 export class BComponent implements OnInit {
 
-  constructor(private service:FirstService  ) { }
+  constructor(private service:FirstService, private router: Router ) { }
 
   ngOnInit(): void {
     console.log(this.service.variableInService);
+  }
+
+  gotoA(){
+    this.router.navigateByUrl('compA');
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FirstService } from '../Services/first.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { FirstService } from '../Services/first.service';
 export class AComponent implements OnInit {
  
   
-  constructor(private service:FirstService) { }
+  constructor(private service : FirstService  , private router : Router ) { }
 
   minutes:any = 60;
   numberArray:any = [];
@@ -18,7 +19,9 @@ export class AComponent implements OnInit {
 
   //  this.numberArray = [4,5];
    // this.calculator(this.numberArray);
-     this.andOperator();
+    // this.andOperator();
+
+    this.service.functionInService();
   }
 
   calculator(data:any){
@@ -57,10 +60,15 @@ export class AComponent implements OnInit {
     let objKeys =  Object.keys(obj);
     let objValue =  Object.values(obj);
 
-    console.log(' obj keys :' + objKeys);
-    console.log(' obj values :' + objValue);
+   // console.log(' obj keys :' + objKeys);
+    //console.log(' obj values :' + objValue);
     
 
+  }
+
+  gotoB(){
+    console.log('goto b fun called ');
+    this.router.navigateByUrl('compB');
   }
 
 }
