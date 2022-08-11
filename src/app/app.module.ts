@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { StructuralComponent } from './Directives/structural/structural.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AComponent,
     BComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    StructuralComponent
   ],
   imports: [
     BrowserModule,

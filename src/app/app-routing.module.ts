@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { StructuralComponent } from './Directives/structural/structural.component';
 
 const routes: Routes = [
 
@@ -26,12 +27,14 @@ const routes: Routes = [
     component:BComponent
   },
   {
+    path:"structuralDirective",
+    component:StructuralComponent
+  },
+  {
     path:'**',
     component:DatabindingComponent
   }
   
-
-
 ];
 
 @NgModule({
