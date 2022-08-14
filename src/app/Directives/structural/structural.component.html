@@ -1,17 +1,21 @@
-<p>structural works!</p>
+<p *ngIf="tempVar">structural works!</p>
 
 <h1>*ngFor Directive</h1>
 
 <table>
     <tr>
+        <th>Sr No</th>
         <th>ROll NO</th>
         <th>NAME</th>
         <th>LOCATION</th>
+        <th>Action</th>
     </tr>
-    <tr *ngFor="let data of studentData">
+    <tr *ngFor="let data of studentData; index as i">
+        <td>{{i + 1}}</td>
         <td>{{data.rollNo}} </td>
         <td>{{data.name}}</td>
         <td>{{data.location}}</td>
+        <td> <button *ngIf='data.rollNo != "B3"'  (click)="editInfo(i)" >Edit</button> </td>
     </tr>
        
 </table>
