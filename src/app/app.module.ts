@@ -7,6 +7,9 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { StructuralComponent } from './Directives/structural/structural.component';
+import { LoginComponent } from './Test/login/login.component';
+import { DashboardComponent } from './Test/dashboard/dashboard.component';
+import { PipeComponent } from './Pipes/pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { StructuralComponent } from './Directives/structural/structural.componen
     AComponent,
     BComponent,
     DatabindingComponent,
-    StructuralComponent
+    StructuralComponent,
+    LoginComponent,
+    DashboardComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,

@@ -36,8 +36,10 @@ export class StructuralComponent implements OnInit {
   ngOnInit(): void {
 
   setTimeout(() => {
-    this.checkNgIF(6);
-  }, 8000);
+
+
+    this.checkNgIF(5);
+  }, 5000);
 
   }
 
@@ -50,11 +52,13 @@ export class StructuralComponent implements OnInit {
   }
 
   checkNgIF(value:any){
+
     if(value == 5){
       this.tempVar = true;
     } else {
       this.tempVar = false;
     }
+
   }
 
   editInfo(value:any){

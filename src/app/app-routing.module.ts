@@ -4,6 +4,9 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { StructuralComponent } from './Directives/structural/structural.component';
+import { PipeComponent } from './Pipes/pipe/pipe.component';
+import { DashboardComponent } from './Test/dashboard/dashboard.component';
+import { LoginComponent } from './Test/login/login.component';
 
 const routes: Routes = [
 
@@ -12,15 +15,19 @@ const routes: Routes = [
   //   component:AComponent
   // },
 
-  // {
-  //   path:'',
-  //   redirectTo:'compA',
-  //   pathMatch:'full'
-  // },
+  {
+    path:'',
+    redirectTo:'login',
+    pathMatch:'full'
+  },
 
   {
     path:"compA",
     component:AComponent
+  },
+  {
+    path:"pipes",
+    component:PipeComponent
   },
   {
     path:"compB",
@@ -31,9 +38,19 @@ const routes: Routes = [
     component:StructuralComponent
   },
   {
+    path:"login",
+    component:LoginComponent
+  },
+  {
+    path:"dashboard",
+    component:DashboardComponent
+  },
+  {
     path:'**',
     component:DatabindingComponent
-  }
+  },
+
+  ///////TEST ROUTING EXAMPLE ///////
   
 ];
 
