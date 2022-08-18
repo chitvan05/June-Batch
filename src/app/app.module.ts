@@ -10,6 +10,10 @@ import { StructuralComponent } from './Directives/structural/structural.componen
 import { LoginComponent } from './Test/login/login.component';
 import { DashboardComponent } from './Test/dashboard/dashboard.component';
 import { PipeComponent } from './Pipes/pipe/pipe.component';
+import { UpperCasePipe } from './Pipes/upper-case.pipe';
+import { CustomPipeComponent } from './Pipes/custom-pipe/custom-pipe.component';
+import { InrToUsedPipe } from './Pipes/inr-to-used.pipe';
+import { AttributeComponent } from './Directives/attribute/attribute.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { PipeComponent } from './Pipes/pipe/pipe.component';
     StructuralComponent,
     LoginComponent,
     DashboardComponent,
-    PipeComponent
+    PipeComponent,
+    UpperCasePipe,
+    CustomPipeComponent,
+    InrToUsedPipe,
+    AttributeComponent
   ],
   imports: [
     BrowserModule,
