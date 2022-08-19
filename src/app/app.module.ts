@@ -14,6 +14,8 @@ import { UpperCasePipe } from './Pipes/upper-case.pipe';
 import { CustomPipeComponent } from './Pipes/custom-pipe/custom-pipe.component';
 import { InrToUsedPipe } from './Pipes/inr-to-used.pipe';
 import { AttributeComponent } from './Directives/attribute/attribute.component';
+import { CustomDirectiveDirective } from './Directives/custom-directive.directive';
+import { CustomComponent } from './Directives/custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AttributeComponent } from './Directives/attribute/attribute.component';
     UpperCasePipe,
     CustomPipeComponent,
     InrToUsedPipe,
-    AttributeComponent
+    AttributeComponent,
+    CustomDirectiveDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

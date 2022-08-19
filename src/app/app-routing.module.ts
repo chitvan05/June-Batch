@@ -4,6 +4,7 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { AttributeComponent } from './Directives/attribute/attribute.component';
+import { CustomComponent } from './Directives/custom/custom.component';
 import { StructuralComponent } from './Directives/structural/structural.component';
 import { CustomPipeComponent } from './Pipes/custom-pipe/custom-pipe.component';
 import { PipeComponent } from './Pipes/pipe/pipe.component';
@@ -39,6 +40,11 @@ const routes: Routes = [
     path:"attribute",
     component:AttributeComponent
   },
+  {
+    path:"custom",
+    component:CustomComponent
+  },
+  
   {
     path:"compB",
     component:BComponent
