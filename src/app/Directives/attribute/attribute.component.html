@@ -1,7 +1,7 @@
 <p>attribute works!</p>
 
 
-<h1 [ngClass]="textColor" >color</h1>
+<h1 [ngClass]="textColor ? 'red' : 'green' " >color</h1>
 
 <button (click)="red()"> red </button>
 <br>

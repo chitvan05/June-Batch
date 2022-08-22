@@ -7,16 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttributeComponent implements OnInit {
 
-  textColor:any = 'green'
+  textColor:boolean = true;
   constructor() { }
 
   ngOnInit(): void {
+
+
+    // setTimeout(() => {
+    //   this.textColor = false;
+    // }, 10000);
+
+    setInterval(()=>{
+      
+      this.textColor = !this.textColor;
+      
+    },5000)
   }
 
   red(){
-    this.textColor = 'red';
+    //this.textColor = 'red';
   }
   green(){
-    this.textColor = 'green';
+    //this.textColor = 'green';
   }
 }

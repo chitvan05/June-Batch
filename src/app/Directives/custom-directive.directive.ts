@@ -3,6 +3,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 @Directive({
   selector: '[appCustomDirective]'
 })
+
 export class CustomDirectiveDirective {
   @Input('appCustomDirective') value : any;
   constructor(private elementRef: ElementRef) { 
