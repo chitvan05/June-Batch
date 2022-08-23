@@ -61,12 +61,27 @@ const routes: Routes = [
     path:"dashboard",
     component:DashboardComponent
   },
+  ///////Lazy loading ROUTING EXAMPLE ///////
+  {
+    path:'lazy',
+    loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule)
+  },
+
+
+
+
+
+
+
+
   {
     path:'**',
     component:DatabindingComponent
   },
 
-  ///////TEST ROUTING EXAMPLE ///////
+
+
+  
   
 ];
 
