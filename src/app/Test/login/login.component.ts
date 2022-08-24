@@ -20,6 +20,6 @@ export class LoginComponent implements OnInit {
   }
 
   redirectToDashboard(){
-    this.router.navigateByUrl('dashboard');
+    this.router.navigateByUrl('home');
   }
 }

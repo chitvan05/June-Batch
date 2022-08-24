@@ -39,7 +39,8 @@ html {
     width: 100%;
     min-height: 100%;
     padding: 20px;
-    padding-top: 250px;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
   
   #formContent {

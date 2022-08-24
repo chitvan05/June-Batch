@@ -66,6 +66,26 @@ const routes: Routes = [
     path:'lazy',
     loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule)
   },
+  {
+    path:'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path:'more',
+    loadChildren: () => import('./more/more.module').then(m => m.MoreModule)
+  },
+  {
+    path:'aboutUs',
+    loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule)
+  },
+  {
+    path:'contactUs',
+    loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+  },
+  {
+    path:'logout',
+    loadChildren: () => import('./logout/logout.module').then(m => m.LogoutModule)
+  },
 
 
 
