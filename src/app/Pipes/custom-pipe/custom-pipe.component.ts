@@ -9,6 +9,7 @@ export class CustomPipeComponent implements OnInit {
 
   text:any = "Sample Text";
   inr:any = 20;
+  commaReplaced:any = "hi my name is+ Aniket. i am topper"
   constructor() { }
 
   ngOnInit(): void {

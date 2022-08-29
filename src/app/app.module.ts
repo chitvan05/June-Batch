@@ -16,6 +16,7 @@ import { InrToUsedPipe } from './Pipes/inr-to-used.pipe';
 import { AttributeComponent } from './Directives/attribute/attribute.component';
 import { CustomDirectiveDirective } from './Directives/custom-directive.directive';
 import { CustomComponent } from './Directives/custom/custom.component';
+import { AddCommaPipe } from './Pipes/add-comma.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CustomComponent } from './Directives/custom/custom.component';
     InrToUsedPipe,
     AttributeComponent,
     CustomDirectiveDirective,
-    CustomComponent
+    CustomComponent,
+    AddCommaPipe
   ],
   imports: [
     BrowserModule,

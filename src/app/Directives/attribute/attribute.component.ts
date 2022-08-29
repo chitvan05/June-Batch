@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttributeComponent implements OnInit {
 
-  textColor:boolean = true;
+  textColor:any = 20;
   constructor() { }
 
   ngOnInit(): void {
