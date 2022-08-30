@@ -7,10 +7,11 @@
         <label for="exampleInputEmail1">Full Name</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name" formControlName="fullname" >
         <small id="emailHelp" class="form-text text-muted">Please Enter Your Fullname.</small>
+        <small id="emailHelp" class="form-text text-danger"  *ngIf="f['fullname'].errors?.['required']"  >Full name is required.</small>
     </div>
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Mobile Number</label>
+        <label for="exampleInputEmail1">Mobile Number<span style="color: red;" >*</span></label>
         <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your mobile number" formControlName="mobileNumber">
         <small id="emailHelp" class="form-text text-muted">Please Enter Your mobile number.</small>
     </div>
@@ -26,10 +27,10 @@
       <input type="text" class="form-control" id="exampleInputPassword1" placeholder="please enter your address" formControlName="address">
     </div>
     <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="agreeCheckbox">
       <label class="form-check-label" for="exampleCheck1">Agree to receive text updates</label>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="contactData(contactInfo.value)" >Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="contactData(contactInfo.value)" [disabled]="!contactInfo.valid" >Submit</button>
   </form>
   
 </div>

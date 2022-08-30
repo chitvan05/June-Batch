@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/Services/data.service';
 
 @Component({
@@ -21,11 +21,19 @@ export class ContactInfoComponent implements OnInit {
 
   createForm(){
     this.contactInfo = this.builder.group({
-      'fullname': [''],
-      'mobileNumber':[''],
-      'email':[''],
+      'fullname': ['',[Validators.required,Validators.maxLength(10),Validators.minLength(5) ]],
+      'mobileNumber':['',[Validators.required,Validators.maxLength(10) ]],
+      'email':['',Validators.required],
       'address':[''],
+      'agreeCheckbox':['',Validators.requiredTrue],
+      
     }) 
+
+  }
+
+
+  get f(): { [key: string]: AbstractControl } {
+    return this.contactInfo.controls;
   }
 
   contactData(data:any){
